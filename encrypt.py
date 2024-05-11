@@ -9,7 +9,9 @@ def encrypt_files(directory, key):
                 encrypted_data = cipher_suite.encrypt(file.read())
             with open(os.path.join(directory, filename), 'wb') as file:
                 file.write(encrypted_data)
+            print(f"El archivo {filename} ha sido cifrado correctamente.")
 
 key = Fernet.generate_key()
 print(key)
 encrypt_files('C:/Users/jrmed/Documents/Javascript', key)
+

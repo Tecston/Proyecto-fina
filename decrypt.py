@@ -9,8 +9,7 @@ def decrypt_files(directory, key):
                 decrypted_data = cipher_suite.decrypt(file.read())
             with open(os.path.join(directory, filename), 'wb') as file:
                 file.write(decrypted_data)
+            print(f"El archivo {filename} ha sido descifrado correctamente.")
 
-key = b's_IcXV3ylUAfv4T-AkXOaV-is7loNwh8aTZN_4T4ABk='
- 
+key = b'vdPDkgx0oWHzyYF76j-MnjDQnvhSz7-hJfPYKbLYxTQ='
 decrypt_files('C:/Users/jrmed/Documents/Javascript', key)
- 
